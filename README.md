@@ -18,7 +18,7 @@
 
 4. **CALCULADORA PHP**
     -Descripción:  *Es una calculadora creada con POO que realiza operaciones simples.
-    -[Ver proyecto](http://crudlva.x10.mx/pruebaApi/cliente/)
+    -[Ver proyecto](http://crudlva.x10.mx/calculadora/)
 
 ## Contacto:
      A traves de:
