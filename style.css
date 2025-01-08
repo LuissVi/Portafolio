@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+   
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    background-color: #A8DADC;
+    padding: 1rem 0;
+}
+
+header {
+    text-align: center;
+    width: 40%;
+    margin: auto;
+    margin-top: 2rem;
+}
+
+nav {
+    width: 40%;
+    
+    margin: 2rem auto;
+    display: flex;
+    justify-content:space-between;
+}
+nav a{
+    color:  #F1FAEE;
+    background-color: #457B9D ;
+    padding: 1rem;
+    text-decoration: none;
+    border-radius: 20px;
+    font-size: 1.2rem;
+    transition: background-color 0.3s, transform 0.2s;
+}
+nav a:hover{
+    background-color:  #355A73;
+    transform: scale(1.1); 
+}
+
+.yio {
+    margin: auto;
+    padding: 2rem;
+    width: 80%;
+    text-align: center;
+    background-color: #457B9D;
+    color: #F1FAEE;
+}
+
+.yio div {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.foto {
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.foto img {
+    width: 100%;
+
+}
+
+/*proyectos*/
+.proyectos {
+    width: 80%;
+    margin: 2rem auto;
+    text-align: center;
+    background-color: #F4D9E1;
+}
+
+.h2 {
+    width: 10rem;
+    margin: auto;
+    margin-top: 1.5rem;
+    padding: 1rem;
+    border-radius: 50%;
+    text-align: center;
+    background-color: #F4D9E1;
+}
+
+
+/*crud*/
+.crud,
+.poke,
+.calendario,
+.calculadora {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    word-wrap: break-word;
+    width: 100%;
+    margin-bottom: 1rem;
+    border: #457B9D 2px solid;
+}
+
+.crud p,
+.poke p,
+.calendario p,
+.calculadora p {
+    width: 70%;
+}
+.contacto{
+    width: 80%;
+    margin:1rem auto;
+    padding: 0.7rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+   justify-content: space-around;
+  font-size: 1.5rem;
+}
+.contacto p{
+    width: 30%;
+    
+}
+.contacto ul {
+    width: 60%;
+    list-style: none;
+    display: flex;
+   align-items: center;
+    justify-content: space-evenly;
+    
+}
+footer{
+    width: 80%;
+    padding: 1rem;
+    margin: auto;
+    text-align: center;
+    background-color: #457B9D;
+    color: #F1FAEE;
+}

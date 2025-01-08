@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portafolio</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -17,45 +18,67 @@
         <a href="#proyectos">Proyectos</a>
         <a href="#contacto">Contacto</a>
     </nav>
-    <section id="yo">
-        <h2>sobre Mí</h2>
-        <p>Soy un desarrollador web en formación, apasionado por la tecnología y el constante aprendizaje</p>
+    <section id="yo" class="yio">
+        <h2>Sobre Mí</h2>
+        <div>
+            <div class="foto">
+                <img src="imagenesWeb/fotoMio.jpeg" alt="Luis">
+            </div>
+            <p>Soy un desarrollador web en formación, apasionado por la tecnología y el constante aprendizaje</p>
+        </div>
     </section>
-    <section id="proyectos">
+    <div class="h2">
         <h2>Proyectos</h2>
+    </div>
+    <section id="proyectos" class="proyectos">
         <ul>
-            <li>
-                <img src="imagenesWeb/crud.PNG" width="200px" height="120px" alt="">
+            <li class="crud">
                 <div>
-                    <p>Este es un crud de ciudades donde podrás buscar alguna ciudad específica y manipular datos <a href="http://crudlva.x10.mx/pruebaApi/cliente/" target="_blank">visitar crud</a></p>
+                    <img src="imagenesWeb/crud.PNG" width="200px" height="120px" alt="">
                 </div>
+                <p>Este es un crud de ciudades donde podrás buscar alguna ciudad específica y manipular datos <a
+                        href="http://crudlva.x10.mx/pruebaApi/cliente/" target="_blank">visitar crud</a></p>
             </li>
-            <li>
-                <img src="imagenesWeb/poke.PNG" width="200px" height="120px" alt="">
+            <li class="poke">
                 <div>
-                    <p>Si te gustan los pokemons aqui podrás apreciar la figura de tu pokemon favorito con algunas de sus características principales <a href="http://pokemonlva.x10.mx/" target="_blank">visitar poke</a></p>
+                    <img src="imagenesWeb/poke.PNG" width="200px" height="120px" alt="">
                 </div>
+                <p>Si te gustan los pokemons aqui podrás apreciar la figura de tu pokemon favorito con algunas de
+                    sus características principales <a href="http://pokemonlva.x10.mx/" target="_blank">visitar
+                        poke</a></p>
             </li>
-            <li>
-                <img src="imagenesWeb/crud.PNG" width="200px" height="120px" alt="">
+            <li class="calendario">
                 <div>
-                    <p>Esto es un calendario donde puedes incluir "eventos" el cual se marcaran con colores desde la F.inicio hasta la F.fin <a href="http://crudlva.x10.mx/calendario/" target="_blank">visitar calendario</a></p>
+                    <img src="imagenesWeb/calendario.PNG" width="200px" height="120px" alt="">
                 </div>
+                <p>Esto es un calendario donde puedes incluir "eventos" el cual se marcaran con colores desde la
+                    F.inicio hasta la F.fin <a href="http://crudlva.x10.mx/calendario/" target="_blank">visitar
+                        calendario</a></p>
             </li>
-            <li>
-                <img src="imagenesWeb/calculadora.PNG" width="200px" height="120px" alt="">
+            <li class="calculadora">
                 <div>
-                    <p>Es una calculadora creada con POO <a href="http://crudlva.x10.mx/calculadora/" target="_blank">visitar calculadora</a></p>
+                    <img src="imagenesWeb/calculadora.PNG" width="200px" height="120px" alt="">
                 </div>
+                <p>Es una calculadora creada con POO <a href="http://crudlva.x10.mx/calculadora/"
+                        target="_blank">visitar calculadora</a></p>
             </li>
         </ul>
     </section>
-    <section id="contacto">
+    <div class="h2">
         <h2>Contactos</h2>
+    </div>
+    <section id="contacto" class="contacto">
         <p>Puedes contactarme en:</p>
         <ul>
-            <li>Email: <a href=" mailto:luisitex@gmail.com" target="_blank">luisitex@gmail.com</a></li>
+            <li><a href="mailto:luisitex@gmail.com" title="Enviar correo a luisitex@gmail.com"><img
+                        src="imagenesWeb/correo.jpg" width="70px" height="50px" alt="correo"></a></li>
+            <li>
+            <li><a href="https://github.com/LuissVi/" title="visitar Git Hub https://github.com/LuissVi"
+                    target="_blank"><img src="imagenesWeb/github.jfif" width="70px" height="50px" alt=""></a></li>
+
+            </li>
         </ul>
+
     </section>
     <footer>
         <p>© 2024 Luis Villar. Todos los derechos reservados...</p>
