@@ -8,10 +8,12 @@ nav {
 @keyframes nav {
     from {
         background-color: rgb(93, 135, 162);
+        box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.8);
     }
 
     to {
         background-color: rgba(93, 135, 162, 0.4); /* 50% de transparencia */
+        box-shadow: 2px 4px 6px rgba(0, 0, 0, 0);
     }
 }
 
@@ -23,7 +25,7 @@ nav {
     top: 0;
     z-index: 1000;
     background-color: rgb(93, 135, 162);
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.8);
     /* Sombras para destacar */
     animation: nav linear;
     animation-timeline: scroll();
@@ -32,7 +34,8 @@ nav {
 }
 @keyframes nav-a {
     from {
-        background-color: #457B9D;}
+        /* background-color: #457B9D; */
+    }
 
     to {
         background-color: rgba(93, 135, 162, 0.5); /* 50% de transparencia */
@@ -54,7 +57,6 @@ nav {
     font-size: 2rem;
     padding: 0.5rem;
     text-decoration: none;
-    
     border-radius: 20px;
     transition: all 0.3s, transform 0.5s ease-in-out;
     animation: nav-a linear;
@@ -64,7 +66,7 @@ nav {
 }
 
 .contenedor-submenu a:hover {
-    background-color: #355A73;
+    background-color: #29465a;
     transform: scale(1.1);
 }
 
