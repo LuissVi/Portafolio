@@ -39,14 +39,14 @@ header p {
     background-color: #5D87A2;
 }
 
-nav {
+/* nav {
     width: 100%;
     margin: 1rem auto;
     display: flex;
     justify-content: space-around;
-}
+} */
 
-nav a {
+/* nav a {
     color: #F1FAEE;
     background-color: #457B9D;
     font-size: 2rem;
@@ -54,22 +54,18 @@ nav a {
     text-decoration: none;
     border-radius: 20px;
     transition: background-color 0.3s, transform 0.2s;
-}
+} */
 
-nav a:hover {
-    background-color: #355A73;
-    transform: scale(1.1);
-}
 
 .yio {
-    margin: 1rem auto;
+    margin: auto;
     padding: 1rem;
     width: 90%;
     text-align: center;
     background-color: #457B9D;
     color: #F1FAEE;
     box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.8);
-
+margin-bottom: 1rem;
 }
 
 .yio h2 {
@@ -251,14 +247,14 @@ footer {
     header p{
         font-size: 4vw;
     }
-    nav {
+    /* nav {
         width: 95%;
         font-size: 3vw;
-    }
+    } */
 
-    nav a {
+    /* nav a {
         padding: 2vw;
-    }
+    } */
 
     .yio h2 {
         font-size: 4vw;
@@ -351,18 +347,19 @@ footer {
     header p{
         font-size: 5vw;
     }
-    nav {
+    
+    /* nav {
         width: 90%;
 
-    }
+    } */
 
-    nav a {
+    /* nav a {
         color: #F1FAEE;
         background-color: #457B9D;
         padding: 0.5rem;
         font-size: 3.5vw;
 
-    }
+    } */
 
     .yio {
         width: 90%;
@@ -453,216 +450,3 @@ footer {
 
 }
 
-@media (max-width:768px) {
-    header {
-        width: 90%;
-        font-size: 2rem;
-        padding: 0.7rem;
-    }
-    header h1{
-        font-size: 6vw;
-    }
-    header p{
-        font-size: 4vw;
-    }
-    nav {
-        width: 95%;
-        font-size: 3vw;
-    }
-
-    nav a {
-        padding: 2vw;
-    }
-
-    .yio h2 {
-        font-size: 4vw;
-    }
-
-    .yio div {
-        display: flex;
-        flex-direction: column;
-        gap: 0.5rem;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .foto {
-        width: 40vw;
-        overflow: hidden;
-        border-radius: 50%;
-        box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.8);
-    }
-    
-    .yio img {
-       width: 40vw;
-       height: auto;
-       object-fit: cover;
-    }
-    .yio div p {
-        font-size: 4vw;
-    }
-
-
-    .crud,
-    .poke,
-    .calendario,
-    .calculadora {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        word-wrap: break-word;
-    }
-
-    .crud a,
-    .poke a,
-    .calendario a,
-    .calculadora a {
-        display: block;
-    }
-
-
-    .crud div img,
-    .poke div img,
-    .calendario div img,
-    .calculadora div img {
-        width: 85vw;
-        height: auto;
-
-    }
-
-    .crud p,
-    .poke p,
-    .calendario p,
-    .calculadora p {
-        padding: 0.2rem;
-        font-size: 3vw;
-    }
-
-    .contacto {
-        width: 90%;
-        margin: 1rem auto;
-        display: flex;
-        flex-direction: column;
-    }
-
-    .contacto p {
-        width: 100%;
-        padding: 0.2rem;
-        display: block;
-    }
-
-    footer {
-        width: 90%;
-    }
-}
-
-@media (max-width:480px) {
-    header {
-        font-size: 5vw;
-        width: 90%;
-        padding: 0.7rem;
-    }
-    header p{
-        font-size: 5vw;
-    }
-    nav {
-        width: 90%;
-
-    }
-
-    nav a {
-        color: #F1FAEE;
-        background-color: #457B9D;
-        padding: 0.5rem;
-        font-size: 3.5vw;
-
-    }
-
-    .yio {
-        width: 90%;
-        padding: 0.7rem;
-    }
-
-    .yio h2 {
-        font-size: 6vw;
-        text-shadow: 4px 4px 9px rgba(0, 0, 0, 1);
-
-    }
-
-    /* .yio div {
-        display: flex;
-        flex-direction: column;
-        gap: 0.5rem;
-        align-items: center;
-        justify-content: center;
-    } */
-
-    .foto {
-        width: 40vw;
-        overflow: hidden;
-        border-radius: 50%;
-        box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.8);
-    }
-    
-    .yio img {
-       width: 40vw;
-       height: auto;
-       object-fit: cover;
-    }
-
-    .yio div p {
-        font-size: 5vw;        text-align: center;
-        padding: 0.2rem;
-
-    }
-
-    .crud,
-    .poke,
-    .calendario,
-    .calculadora {
-        display: flex;
-        flex-direction: column;
-        word-wrap: break-word;
-    }
-
-    .crud a,
-    .poke a,
-    .calendario a,
-    .calculadora a {
-        display: block;
-    }
-
-
-
-    .crud div img,
-    .poke div img,
-    .calendario div img,
-    .calculadora div img {
-        width: 85vw;
-        height: auto;
-        margin: auto;
-    }
-
-    .crud p,
-    .poke p,
-    .calendario p,
-    .calculadora p {
-        padding: 0.2rem;
-        font-size: 4vw;
-    }
-
-    .contacto {
-        width: 90%;
-        margin: 1rem auto;
-        display: flex;
-        flex-direction: column;
-    }
-
-    .contacto p {
-        width: 100%;
-        padding: 0.2rem;
-        display: block;
-    }
-
-
-}
