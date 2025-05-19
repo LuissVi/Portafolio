@@ -4,7 +4,7 @@
 
 ## 🔗 Enlace al proyecto
 
-👉 [lva-eventos-calendario.netlify.app](https://lva-portafolio.netlify.app)
+👉 [lva-portafolio.netlify.app](https://lva-portafolio.netlify.app)
 
 
 ## Proyectos:
