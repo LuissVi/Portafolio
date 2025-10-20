@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -5,37 +9,60 @@
 }
 
 body {
-
-
+    font-family: 'Inter', sans-serif;
+    /* background-color: #457B9D; */
     font-family: 'Roboto', sans-serif;
-    color: #333;
-    background-color: #A8DADC;
-    padding: 1rem 0;
+    color: #222;
+    background-color: #457B9D;
+
 
 }
 
 header {
-    width: 90%;
-    padding: 1rem;
-    font-size: 2.4vw;
+    position: relative;
+    width: 100%;
+    height: 40vh;
+}
+
+header video#bg-video {
+    position: absolute;
+    /* posición absoluta dentro del header */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* cubre todo el header sin deformarse */
+    z-index: 0;
+}
+
+.head_section {
+    position: relative;
+    /* relativo para estar sobre el video */
+    z-index: 1;
+    font-family: 'Poppins', sans-serif;
+    width: 100%;
     padding: 1rem;
     font-size: 2.4vw;
     text-align: center;
-    background-color: #457B9D;
+    /* background-color: #457B9D; */
     margin: auto;
-    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.8);
+
 }
 
-header h1 {
+/*header video fondo*/
+
+.head_section h1 {
     font-size: 4vw;
     text-shadow: 3px 3px 3px rgba(255, 255, 255, 0.6);
+    color: whitesmoke;
 }
 
-header p {
+.head_section p {
     font-size: 3vw;
-    color: #F1FAEE;
+    color: whitesmoke;
     padding: 0.5rem;
-    background-color: #5D87A2;
+    /* background-color: #5D87A2; */
 }
 
 /* nav {
@@ -59,43 +86,65 @@ header p {
 .yio {
     margin: auto;
     padding: 1rem;
-    width: 90%;
+    width: 100%;
     text-align: center;
-    background-color: #457B9D;
+    /* background-color: #457B9D; */
     color: #F1FAEE;
-    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.8);
-margin-bottom: 1rem;
+    /* box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.8); */
+    /* margin-bottom: 1rem; */
+    background-image: url(../imagenesWeb/codigo.webp);
+    background-size: cover;
+    background-position: center;
+    /* box-shadow: 0 12px 40px rgba(255, 255, 255, 0.8); */
+    background-attachment: fixed;
 }
 
 .yio h2 {
     font-size: 3vw;
     text-shadow: 4px 4px 9px rgba(0, 0, 0, 1);
-
 }
 
 .yio div {
+    margin: auto;
     display: flex;
-    gap: 2rem;
+    width: 80%;
     align-items: center;
     justify-content: center;
+    gap: 4rem;
+
 }
+
+.yio div figure {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.yio div p {
+    flex: 2;
+}
+
+
 
 .foto {
     width: 40%;
     overflow: hidden;
     border-radius: 50%;
     box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.8);
-    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.8);
 }
 
-.yio img {
-   width: 85vw;
-   height: auto;
+.yio figure img {
+    width: 85vw;
+    height: auto;
 }
 
-.yio p {
-    background-color: #5D87A2;
+.yio div p {
+    background-color: rgba(255, 255, 255, 0.8);
     font-size: 2.5vw;
+    color: #222;
+    border-radius: 25px;
+    padding: 1rem;
 }
 
 
@@ -103,20 +152,41 @@ margin-bottom: 1rem;
 
 
 .proyectos {
-    width: 90%;
-    margin: 1rem auto;
-    text-align: center;
-
+    width: 100%;
+    margin: auto;
+    padding: 2rem 0rem;
+    /* text-align: center; */
+    /* background: linear-gradient(to bottom, 
+  rgba(0, 0, 0, 1) 30%,      
+  rgba(0, 0, 0, 0.7) 50%,   
+  rgba(0, 0, 0, 0) 100%     
+); */
+    background-color: black;
 }
 
-.h2 {
+.proyectos ul {
+    position: relative;
+    background-image: url(../imagenesWeb/codigo_proyect.webp);
+    /* background-position: center; */
+    /* background-size: cover; */
+}
+
+.proyectos .fade {
+    display: flex;
+    gap: 3rem;
+}
+
+.proyectos .h2 {
     width: 12rem;
-    background-color: #F4D9E1;
-    width: 12rem;
-    background-color: #F4D9E1;
+    height: 3rem;
+    background-color: rgba(255, 255, 255, 0.8);
     margin: auto;
-    border-radius: 50%;
+    border-radius: 25px;
     overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #222;
 }
 
 .h2 h2 {
@@ -131,108 +201,184 @@ margin-bottom: 1rem;
 .poke,
 .calendario,
 .calculadora {
+    position: relative;
+    margin: auto;
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 1rem;
-    gap: 1rem;
-    padding: 10px;
+    justify-content: space-around;
+    /* gap: 2rem; */
+    padding: 1rem;
     word-wrap: break-word;
+    width: 80%;
+    height: auto;
+    margin-bottom: 3rem;
+    border-radius: 5px;
+    box-shadow: 0px 20px 0px -10px rgba(255, 255, 255, 0.9);
+    background-color: rgba(255, 255, 255, 0.5);
+    /* background-image: url(../imagenesWeb/codigo-white.webp);
+    background-size: cover; */
+}
+
+/* .crud::before,
+.poke::before,
+.calendario::before,
+.calculadora::before*/
+.proyectos ul::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    margin-bottom: 1rem;
-    border: #457B9D 2px solid;
-    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.8);
-    background-color: #F4D9E1;
-
-    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.8);
-    background-color: #F4D9E1;
-
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
 }
 
 .crud p,
 .poke p,
 .calendario p,
 .calculadora p {
-    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    height: 100%;
     font-size: 1.5rem;
-    background-color: #FDF2F5;
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    padding: 1.5rem 1rem;
+    border-radius: 25px;
+    z-index: 99;
+    color: #222;
 }
-.crud div img,
-.poke div img,
-.calendario div img,
-.calculadora div img {
-    width: 300px;
-    height: auto;
+
+.crud figure,
+.poke figure,
+.calendario figure,
+.calculadora figure {
+    z-index: 99;
+}
+
+.crud figure img,
+.poke figure img,
+.calendario figure img {
+    width: auto;
+    height: 300px;
     object-fit: cover;
+    border-radius: 25px;
+    transition: all 0.4s ease-in;
+    border: 1px solid white;
+
+}
+
+.crud figure img:hover {
+    transform: scale(1.1);
+}
+
+.poke figure img:hover {
+    transform: scale(1.1);
+}
+
+.calendario figure img:hover {
+    transform: scale(1.1);
+}
+
+.calculadora figure img {
+    width: 400px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 25px;
+    transition: all 0.4s ease-in;
+}
+
+.calculadora figure img:hover {
+    transform: scale(1.1);
 }
 
 .crud a,
 .poke a,
 .calendario a,
 .calculadora a {
-    background-color: #F4D9E1;
+    background-color: #457B9D;
     width: 6rem;
     margin: auto;
     display: block;
+    border-radius: 25px;
+    border: 1px solid #333;
     text-decoration: none;
+    width: 20%;
+    transition: width 0.4s ease-in;
+    color: white;
+}
+
+.crud:hover a,
+.poke:hover a,
+.calendario:hover a,
+.calculadora:hover a {
+    width: 70%;
 }
 
 span {
-    background-color: rgb(13, 88, 236);
+    background-color: rgb(0, 0, 0);
     color: #F1FAEE;
-    border-radius: 5px;
-    /* Bordes redondeados */
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
     font-size: 1em;
-    margin-left: 5px;
+    margin-left: 1rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
 }
 
 .contacto {
-    width: 90%;
+    width: 80%;
     margin: 1rem auto;
     padding: 0.7rem;
     text-align: center;
     display: flex;
     align-items: center;
     gap: 1rem;
-    justify-content: space-around;
+    justify-content: center;
     font-size: 1.5rem;
+    border-radius: 20px;
     border: #457B9D 2px solid;
-    background-color: #F4D9E1;
-    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.8);
-
-    justify-content: space-around;
+    justify-content: space-between;
     font-size: 1.5rem;
-    border: #457B9D 2px solid;
-    background-color: #F4D9E1;
-    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.8);
-
 }
 
-
-.contacto p  {
-    width: 30%;
-    background-color: #FDF2F5;
-
+.contacto p {
+    color: white;
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 
 .contacto ul {
-    width: 60%;
+    width: 100%;
     list-style: none;
     display: flex;
-     align-items: center;
-    justify-content: space-evenly;
-
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
 }
 
 footer {
-    width: 90%;
+    width: 80%;
     padding: 1rem;
     margin: auto;
     text-align: center;
     background-color: #457B9D;
     color: #F1FAEE;
+    letter-spacing: 1px;
 }
+
+.contacto .linkedin img {
+        background-color: white;
+        border-radius: 15px;
+    }
 
 @media (max-width:768px) {
     header {
@@ -240,12 +386,15 @@ footer {
         font-size: 2rem;
         padding: 0.7rem;
     }
-    header h1{
-        font-size: 6vw;
+
+    header h1 {
+        font-size: 2rem !important;
     }
-    header p{
-        font-size: 4vw;
+
+    header p {
+        font-size: 1.2rem !important;
     }
+
     /* nav {
         width: 95%;
         font-size: 3vw;
@@ -256,33 +405,57 @@ footer {
     } */
 
     .yio h2 {
-        font-size: 4vw;
+        font-size: 1.7rem !important;
+        margin-bottom: 2rem;
     }
 
     .yio div {
+        width: 90%;
         display: flex;
         flex-direction: column;
-        gap: 0.5rem;
-        align-items: center;
+        gap: 2rem;
         justify-content: center;
     }
 
     .foto {
-        width: 40vw;
+        width: 50vw !important;
         overflow: hidden;
         border-radius: 50%;
         box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.8);
     }
-    
+
     .yio img {
-       width: 40vw;
-       height: auto;
-       object-fit: cover;
-    }
-    .yio div p {
-        font-size: 4vw;
+        width: 100%;
+        height: auto;
+        object-fit: cover;
     }
 
+    .yio div p {
+        font-size: 1.2rem !important;
+        width: 100%;
+        color: #111;
+    }
+
+    .proyectos {
+        width: 100%;
+        background-color: black;
+        padding: 0;
+    }
+
+    .cont-proyects {
+        width: 100%;
+    }
+
+    .proyectos .cont-proyects figure {
+        width: 100%;
+    }
+
+    .proyectos .h2 {
+        background-color: black;
+        color: white;
+        margin: 0;
+
+    }
 
     .crud,
     .poke,
@@ -302,21 +475,42 @@ footer {
     }
 
 
-    .crud div img,
+    /* .crud div img,
     .poke div img,
     .calendario div img,
     .calculadora div img {
         width: 85vw;
         height: auto;
 
+    } */
+
+    .crud figure img,
+    .poke figure img,
+    .calendario figure img {
+        width: 100%;
+        height: auto;
+        border: 2px solid white;
+    }
+
+    .calculadora figure img {
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+        border-radius: 25px;
+        transition: all 0.4s ease-in;
+        border: 1px solid white;
     }
 
     .crud p,
     .poke p,
     .calendario p,
     .calculadora p {
-        padding: 0.2rem;
-        font-size: 3vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 1rem;
+        width: 100%;
+        gap: 1rem;
     }
 
     .contacto {
@@ -339,14 +533,12 @@ footer {
 
 @media (max-width:480px) {
     header {
-        font-size: 5vw;
-        width: 90%;
+        width: 100%;
         padding: 0.7rem;
+        max-height: 30vh;
     }
-    header p{
-        font-size: 5vw;
-    }
-    
+
+
     /* nav {
         width: 90%;
 
@@ -360,10 +552,10 @@ footer {
 
     } */
 
-    .yio {
-        width: 90%;
+    /* .yio {
+        width: 100%;
         padding: 0.7rem;
-    }
+    } */
 
     .yio h2 {
         font-size: 6vw;
@@ -385,27 +577,23 @@ footer {
         border-radius: 50%;
         box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.8);
     }
-    
+
     .yio img {
-       width: 40vw;
-       height: auto;
-       object-fit: cover;
+        width: 40vw;
+        height: auto;
+        object-fit: cover;
     }
 
-    .yio div p {
-        font-size: 5vw;        text-align: center;
-        padding: 0.2rem;
 
-    }
 
-    .crud,
+    /* .crud,
     .poke,
     .calendario,
     .calculadora {
         display: flex;
         flex-direction: column;
         word-wrap: break-word;
-    }
+    } */
 
     .crud a,
     .poke a,
@@ -416,36 +604,32 @@ footer {
 
 
 
-    .crud div img,
+    /* .crud div img,
     .poke div img,
     .calendario div img,
     .calculadora div img {
         width: 85vw;
         height: auto;
         margin: auto;
-    }
+    } */
 
-    .crud p,
-    .poke p,
-    .calendario p,
-    .calculadora p {
-        padding: 0.2rem;
-        font-size: 4vw;
-    }
+
 
     .contacto {
-        width: 90%;
+        width: 100%;
         margin: 1rem auto;
         display: flex;
         flex-direction: column;
+        background-color: transparent;
+        box-shadow: none;
     }
 
     .contacto p {
         width: 100%;
         padding: 0.2rem;
         display: block;
+        color: white;
     }
 
 
 }
-
