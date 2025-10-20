@@ -1,7 +1,5 @@
 /* Estilos generales */
-header {
-    border-bottom: 1px solid wheat;
-}
+
 
 header,
 nav {
@@ -26,12 +24,9 @@ nav {
 .contenedor-menu {
     width: 100%;
     margin: auto;
-    /* position: relative; */
     position: sticky;
     top: 0;
     z-index: 1000;
-    /* box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.8); */
-    /* Sombras para destacar */
     animation: nav linear;
     animation-timeline: scroll();
     animation-range: 0 200px;
@@ -60,7 +55,6 @@ nav {
     display: flex;
     justify-content: space-around;
     text-align: center;
-
 }
 
 .contenedor-submenu a {
@@ -76,6 +70,7 @@ nav {
     animation-timeline: scroll();
     animation-range: 0 200px;
     animation-fill-mode: both;
+    border-bottom: 1px solid wheat;
 }
 
 .contenedor-submenu a:hover {
@@ -99,13 +94,6 @@ nav {
     border-radius: 2px;
     transition: transform 0.6s ease;
 }
-
-/* .click span {
-    background-color: red;
-    width: 100%;
-    height: 3px;
-    
-} */
 
 /* Ocultar el menú por defecto en móviles */
 .contenedor-submenu {

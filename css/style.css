@@ -10,7 +10,6 @@ html {
 
 body {
     font-family: 'Inter', sans-serif;
-    /* background-color: #457B9D; */
     font-family: 'Roboto', sans-serif;
     color: #222;
     background-color: #457B9D;
@@ -26,26 +25,22 @@ header {
 
 header video#bg-video {
     position: absolute;
-    /* posición absoluta dentro del header */
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
-    /* cubre todo el header sin deformarse */
     z-index: 0;
 }
 
 .head_section {
     position: relative;
-    /* relativo para estar sobre el video */
     z-index: 1;
     font-family: 'Poppins', sans-serif;
     width: 100%;
     padding: 1rem;
     font-size: 2.4vw;
     text-align: center;
-    /* background-color: #457B9D; */
     margin: auto;
 
 }
@@ -65,37 +60,15 @@ header video#bg-video {
     /* background-color: #5D87A2; */
 }
 
-/* nav {
-    width: 100%;
-    margin: 1rem auto;
-    display: flex;
-    justify-content: space-around;
-} */
-
-/* nav a {
-    color: #F1FAEE;
-    background-color: #457B9D;
-    font-size: 2rem;
-    padding: 0.5rem;
-    text-decoration: none;
-    border-radius: 20px;
-    transition: background-color 0.3s, transform 0.2s;
-} */
-
-
 .yio {
     margin: auto;
     padding: 1rem;
     width: 100%;
     text-align: center;
-    /* background-color: #457B9D; */
     color: #F1FAEE;
-    /* box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.8); */
-    /* margin-bottom: 1rem; */
     background-image: url(../imagenesWeb/codigo.webp);
     background-size: cover;
     background-position: center;
-    /* box-shadow: 0 12px 40px rgba(255, 255, 255, 0.8); */
     background-attachment: fixed;
 }
 
@@ -125,8 +98,6 @@ header video#bg-video {
     flex: 2;
 }
 
-
-
 .foto {
     width: 40%;
     overflow: hidden;
@@ -155,12 +126,6 @@ header video#bg-video {
     width: 100%;
     margin: auto;
     padding: 2rem 0rem;
-    /* text-align: center; */
-    /* background: linear-gradient(to bottom, 
-  rgba(0, 0, 0, 1) 30%,      
-  rgba(0, 0, 0, 0.7) 50%,   
-  rgba(0, 0, 0, 0) 100%     
-); */
     background-color: black;
 }
 
@@ -219,10 +184,6 @@ header video#bg-video {
     background-size: cover; */
 }
 
-/* .crud::before,
-.poke::before,
-.calendario::before,
-.calculadora::before*/
 .proyectos ul::before {
     content: "";
     position: absolute;
@@ -395,15 +356,6 @@ footer {
         font-size: 1.2rem !important;
     }
 
-    /* nav {
-        width: 95%;
-        font-size: 3vw;
-    } */
-
-    /* nav a {
-        padding: 2vw;
-    } */
-
     .yio h2 {
         font-size: 1.7rem !important;
         margin-bottom: 2rem;
@@ -474,16 +426,6 @@ footer {
         display: block;
     }
 
-
-    /* .crud div img,
-    .poke div img,
-    .calendario div img,
-    .calculadora div img {
-        width: 85vw;
-        height: auto;
-
-    } */
-
     .crud figure img,
     .poke figure img,
     .calendario figure img {
@@ -513,6 +455,10 @@ footer {
         gap: 1rem;
     }
 
+    .proyectos .fade p a{
+width: 80%;
+    }
+
     .contacto {
         width: 90%;
         margin: 1rem auto;
@@ -538,38 +484,11 @@ footer {
         max-height: 30vh;
     }
 
-
-    /* nav {
-        width: 90%;
-
-    } */
-
-    /* nav a {
-        color: #F1FAEE;
-        background-color: #457B9D;
-        padding: 0.5rem;
-        font-size: 3.5vw;
-
-    } */
-
-    /* .yio {
-        width: 100%;
-        padding: 0.7rem;
-    } */
-
     .yio h2 {
         font-size: 6vw;
         text-shadow: 4px 4px 9px rgba(0, 0, 0, 1);
 
     }
-
-    /* .yio div {
-        display: flex;
-        flex-direction: column;
-        gap: 0.5rem;
-        align-items: center;
-        justify-content: center;
-    } */
 
     .foto {
         width: 40vw;
@@ -584,36 +503,12 @@ footer {
         object-fit: cover;
     }
 
-
-
-    /* .crud,
-    .poke,
-    .calendario,
-    .calculadora {
-        display: flex;
-        flex-direction: column;
-        word-wrap: break-word;
-    } */
-
     .crud a,
     .poke a,
     .calendario a,
     .calculadora a {
         display: block;
     }
-
-
-
-    /* .crud div img,
-    .poke div img,
-    .calendario div img,
-    .calculadora div img {
-        width: 85vw;
-        height: auto;
-        margin: auto;
-    } */
-
-
 
     .contacto {
         width: 100%;
