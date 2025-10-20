@@ -1,48 +1,61 @@
 /* Estilos generales */
+header {
+    border-bottom: 1px solid wheat;
+}
+
 header,
 nav {
-    padding: 1rem;
+    padding: 1rem 0;
 }
 
 /* animacion del nav */
 @keyframes nav {
     from {
-        background-color: rgb(93, 135, 162);
-        box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.8);
+        /* background-color: black; */
+        /* background-color: rgb(93, 135, 162) ; */
+        /* box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.8); */
     }
 
     to {
-        background-color: rgba(93, 135, 162, 0.4); /* 50% de transparencia */
-        box-shadow: 2px 4px 6px rgba(0, 0, 0, 0);
+        background-color: rgba(0, 0, 0, 0);
+        /* 50% de transparencia */
+        /* box-shadow: 2px 4px 6px rgba(0, 0, 0, 0); */
     }
 }
 
 .contenedor-menu {
-    width: 90%;
+    width: 100%;
     margin: auto;
     /* position: relative; */
     position: sticky;
     top: 0;
     z-index: 1000;
-    background-color: rgb(93, 135, 162);
-    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.8);
+    /* box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.8); */
     /* Sombras para destacar */
     animation: nav linear;
     animation-timeline: scroll();
     animation-range: 0 200px;
     animation-fill-mode: both;
 }
+
+.contenedor-menu span {
+    width: 45px;
+    margin-left: 0;
+}
+
 @keyframes nav-a {
     from {
         /* background-color: #457B9D; */
     }
 
     to {
-        background-color: rgba(93, 135, 162, 0.5); /* 50% de transparencia */
+        background-color: rgba(93, 135, 162, 0.7);
+        /* 50% de transparencia */
     }
 }
+
 .contenedor-submenu {
-    width: 90%;
+    width: 100%;
     margin: auto;
     display: flex;
     justify-content: space-around;
@@ -52,10 +65,10 @@ nav {
 
 .contenedor-submenu a {
     display: inline-block;
-    color: #F1FAEE;
-    background-color: #457B9D;
+    color: #333;
+    background-color: rgba(255, 255, 255, 0.8);
     font-size: 2rem;
-    padding: 0.5rem;
+    padding: 0.5rem 1rem;
     text-decoration: none;
     border-radius: 20px;
     transition: all 0.3s, transform 0.5s ease-in-out;
@@ -68,19 +81,21 @@ nav {
 .contenedor-submenu a:hover {
     background-color: #29465a;
     transform: scale(1.1);
+    color: aliceblue;
 }
 
 .contenedor-menu .click {
     display: none;
     flex-direction: column;
-    gap: 5px;
+    gap: 7px;
     width: 30px;
     cursor: pointer;
+    margin: auto;
 }
 
 .contenedor-menu .click span {
-    height: 3px;
-    background: #333;
+    height: 5px;
+    background: white;
     border-radius: 2px;
     transition: transform 0.6s ease;
 }
@@ -106,16 +121,20 @@ nav {
         display: flex;
     }
 
+    .contenedor-menu {
+        border-bottom: 1px solid white;
+
+    }
+
     .contenedor-submenu {
-        width: 22%;
+        width: 100%;
         display: flex;
         flex-direction: column;
         position: absolute;
-        /* align-items: start; */
+        align-items: start;
         background: rgba(37, 35, 35, 0.5);
-        position: absolute;
         border-radius: 10px;
-        top: 40px;
+        top: 60px;
         left: -25rem;
         right: 0;
         padding: .5rem;
@@ -128,13 +147,17 @@ nav {
     }
 
     .contenedor-submenu a {
+        width: 100%;
         display: inline-block;
-        background-color: #457B9D;
-        font-size: 1rem;
-        padding: .3rem;
-        transition:  transform 0.2s ease-in-out  background-color ;
+        background-color: transparent !important;
+        font-size: 1.2rem;
+        transition: transform 0.2s ease-in-out background-color;
         cursor: pointer;
+        color: black;
+        border-radius: 0;
+        border-bottom: 1px solid black;
     }
+
     .contenedor-submenu a:hover {
         background-color: #333;
         transform: scale(1.2);
@@ -142,7 +165,7 @@ nav {
 
     /* transformamos los span a X */
     #togle:checked+.click span:nth-child(1) {
-        transform: translateY(8px) rotate(45deg);
+        transform: translateY(13px) rotate(45deg);
     }
 
     /* oculatamos la segunda linea */
@@ -151,10 +174,10 @@ nav {
     }
 
     #togle:checked+.click span:nth-child(3) {
-        transform: translateY(-8px) rotate(-45deg);
+        transform: translateY(-11px) rotate(-45deg);
     }
 
-    
+
 
     /* Mostrar el menú cuando el checkbox está activo */
     #togle:checked~.contenedor-submenu {
@@ -163,22 +186,31 @@ nav {
         transform: translateY(0);
         pointer-events: auto;
     }
-    
+
     #togle:checked~.click span {
         background-color: red;
     }
 }
-@media (max-width: 572px){
-    .contenedor-submenu{
-        width:23%;
+
+@media (max-width: 572px) {
+    .contenedor-submenu {
+        width: 23%;
         left: -20rem;
         min-width: 100px;
     }
 }
-@media (max-width: 450px){
-    .contenedor-submenu{
+
+@media (max-width: 450px) {
+
+    .contenedor-submenu {
         width: 35%;
-        left: -13rem;
+        left: -16rem;
         min-width: 100px;
+        background-color: white;
+        padding: 0;
+    }
+
+    .contenedor-submenu li {
+        width: 100% !important;
     }
 }

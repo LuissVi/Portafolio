@@ -6,95 +6,103 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portafolio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/menuHeader.css">
+    <link rel="stylesheet" href="css/animacion.css">
 </head>
 
 <body>
     <header>
-        <h1>Mi Portafolio</h1>
-        <p>Bienvenido a mi espacio personal</p>
+        <video autoplay muted loop playsinline id="bg-video">
+            <source src="imagenesWeb/fondo_dinamico.mp4" type="video/mp4">
+        </video>
+        <section class="head_section">
+            <h1>Mi Portafolio</h1>
+            <p>Bienvenido a mi espacio personal</p>
+        </section>
+
+        <nav class="contenedor-menu">
+            <input type="checkbox" id="togle" hidden>
+            <label for="togle" class="click" aria-label="abrir menú">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            <ul class="contenedor-submenu">
+                <li class="item_1"><a href="#yo">Sobre Mí</a></li>
+                <li class="item_2"><a href="#proyectos">Proyectos</a></li>
+                <li class="item_3"><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
     </header>
-    <nav class="contenedor-menu">
-        <input type="checkbox" id="togle" hidden>
-        <label for="togle" class="click" aria-label="abrir menú">
-            <span></span>
-            <span></span>
-            <span></span>
-        </label>
-        <ul class="contenedor-submenu">
-            <li><a href="#yo">Sobre Mí</a></li>
-            <li><a href="#proyectos">Proyectos</a></li>
-            <li><a href="#contacto">Contacto</a></li>
-        </ul>
-    </nav>
     <section id="yo" class="yio">
         <h2>Sobre Mí</h2>
         <div>
-            <div class="foto">
+            <figure class="foto">
                 <img src="imagenesWeb/fotoMio.jpeg" alt="Luis">
-            </div>
+            </figure>
             <p>Soy un desarrollador web en formación, apasionado por la tecnología y el constante aprendizaje.</p>
         </div>
     </section>
-    <div class="h2">
-        <h2>Proyectos</h2>
-    </div>
     <section id="proyectos" class="proyectos">
-        <ul>
-            <li class="crud">
-                <div>
+        <h2 class="h2">Proyectos</h2>
+        <ul class="cont-proyects">
+            <li class="crud fade">
+                <figure>
                     <img src="imagenesWeb/crud.PNG" alt="foto crud">
-                </div>
-                <p>Este es un crud de ciudades donde podrás buscar alguna ciudad específica y manipular datos.<a
-                        href="http://crudlva.x10.mx/pruebaApi/cliente/" target="_blank"
-                        rel="noopener noreferrer">visitar<span>↗</span></a></p>
+                </figure>
+                <p>Este es un crud de ciudades donde podrás buscar alguna ciudad específica y manipular datos.
+                    <a href="http://crudlva.x10.mx/pruebaApi/cliente/" target="_blank"
+                        rel="noopener noreferrer">Ir<span>↗</span></a>
+                </p>
             </li>
-            <li class="poke">
-                <div>
+            <li class="poke fade">
+                <figure>
                     <img src="imagenesWeb/poke.PNG" alt="foto poke">
-                </div>
+                </figure>
                 <p>Si te gustan los pokemons aqui podrás apreciar la figura de tu pokemon favorito con algunas de
                     sus características principales. <a href="http://pokemonlva.x10.mx/" target="_blank"
-                        rel="noopener noreferrer">visitar<span>↗</span></a></p>
+                        rel="noopener noreferrer">Ir<span>↗</span></a></p>
             </li>
-            <li class="calendario">
-                <div>
+            <li class="calendario fade">
+                <figure>
                     <img src="imagenesWeb/calendario.PNG" alt="foto cslendario">
-                </div>
+                </figure>
                 <p>Esto es un calendario donde puedes incluir "eventos" el cual se marcaran con colores desde la
                     F.inicio hasta la F.fin. <a href="http://crudlva.x10.mx/calendario/" target="_blank"
-                        rel="noopener noreferrer">visitar<span>↗</span></a></p>
+                        rel="noopener noreferrer">Ir<span>↗</span></a></p>
             </li>
-            <li class="calculadora">
-                <div>
+            <li class="calculadora fade">
+                <figure>
                     <img src="imagenesWeb/calculadora.PNG" alt="foto calculadora">
-                </div>
+                </figure>
                 <p>Es una calculadora que realiza operaciones básicas creada con POO. <a
                         href="http://crudlva.x10.mx/calculadora/" target="_blank"
-                        rel="noopener noreferrer">visitar<span>↗</span></a></p>
+                        rel="noopener noreferrer">Ir<span>↗</span></a></p>
             </li>
         </ul>
     </section>
-    <div class="h2">
-        <h2>Contactos</h2>
-    </div>
+
     <section id="contacto" class="contacto">
-        <p>Puedes contactarme en:</p>
+        <p>Contáctame:</p>
         <ul>
             <li><a href="mailto:luisitex@gmail.com" title="Enviar correo a luisitex@gmail.com">
                     <img src="imagenesWeb/correo.jpg" width="70" height="50" alt="correo"></a></li>
-            <li>
-            <li><a href="https://github.com/LuissVi/" title="visitar Git Hub https://github.com/LuissVi"
+            
+            <li><a href="https://github.com/LuissVi/" title="visitar GitHub"
                     target="_blank"><img src="imagenesWeb/github.jfif" width="70px" height="50px" alt=""></a></li>
-
+            </li>
+            <li class="linkedin"><a href="https://www.linkedin.com/in/luis-villar-9238a025b/"
+                    title="visitar mi perfil de LinkedIn" target="_blank"><img
+                        src="imagenesWeb/inkedin-removebg-preview.png" width="70px" height="50px" alt=""></a>
             </li>
         </ul>
 
     </section>
     <footer>
-        <p>© 2024 Luis Villar. Todos los derechos reservados.</p>
+        <p>© 2024 Luis Villar | Todos los derechos reservados.</p>
     </footer>
 </body>
 
